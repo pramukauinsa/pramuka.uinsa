@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pramuka UIN Sunan Ampel Surabaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://placehold.co/1920x1080') no-repeat center center/cover;
+            height: 70vh;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #166534; /* Emerald-800 */
+        }
+        
+        .struktur-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .struktur-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .dropdown.active .dropdown-content {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://placehold.co/60x60" alt="Logo Pramuka UIN Sunan Ampel Surabaya dengan lambang tunas kelapa berwarna hijau di tengah lingkaran" class="mr-3">
+                <h1 class="text-xl font-bold text-emerald-800">PRAMUKA UINSA</h1>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#tentang" class="text-gray-700 hover:text-emerald-600 transition">Tentang</a>
+                <a href="#informasi" class="text-gray-700 hover:text-emerald-600 transition">Informasi</a>
+                <a href="#kontak" class="text-gray-700 hover:text-emerald-600 transition">Kontak</a>
+            </div>
+            
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full px-6 py-3 border-t" id="mobile-menu">
+            <a href="#tentang" class="block py-2 text-gray-700 hover:text-emerald-600 transition">Tentang</a>
+            <a href="#informasi" class="block py-2 text-gray-700 hover:text-emerald-600 transition">Informasi</a>
+            <a href="#kontak" class="block py-2 text-gray-700 hover:text-emerald-600 transition">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white">
+        <div class="px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">PRAMUKA UIN SUNAN AMPEL SURABAYA</h1>
+            <p class="text-xl mb-8">"Satya Ku Kudarmakan, Darma Ku Kubaktikan"</p>
+            <a href="#tentang" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-gray-800 section-title mb-12">Tentang Kami</h2>
+        
+        <!-- Profil -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Profil</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-gray-600 mb-4">
+                        Pramuka UIN Sunan Ampel Surabaya adalah organisasi kepanduan yang berperan dalam pembinaan karakter mahasiswa melalui kegiatan kepramukaan di lingkungan kampus.
+                    </p>
+                    <p class="text-gray-600">
+                        Berdiri sejak tahun 1999, kami telah berkomitmen untuk melahirkan generasi muda yang berkarakter, cerdas, dan berbudi pekerti luhur sesuai dengan nilai-nilai kepramukaan.
+                    </p>
+                </div>
+                <div class="rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/800x500" alt="Foto kelompok anggota Pramuka UINSA sedang melakukan kegiatan outdoor dengan seragam pramuka berwarna coklat muda di alam terbuka" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Struktur Organisasi -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Struktur Organisasi</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md struktur-card">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="https://placehold.co/200x200" alt="Foto Ketua Racana Pramuka UINSA mengenakan seragam pramuka lengkap" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-center font-semibold text-lg">M. Raihan Firdaus</h4>
+                    <p class="text-center text-gray-600">Ketua Racana</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md struktur-card">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="https://placehold.co/200x200" alt="Foto Wakil Ketua Racana Pramuka UINSA dengan senyum ramah" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-center font-semibold text-lg">Aisyah Putri</h4>
+                    <p class="text-center text-gray-600">Wakil Ketua</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md struktur-card">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="https://placehold.co/200x200" alt="Foto Sekretaris Racana Pramuka UINSA memegang buku catatan" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-center font-semibold text-lg">Rizky Maulana</h4>
+                    <p class="text-center text-gray-600">Sekretaris</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md struktur-card">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="https://placehold.co/200x200" alt="Foto Bendahara Racana Pramuka UINSA dengan kalkulator di tangan" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-center font-semibold text-lg">Dewi Lestari</h4>
+                    <p class="text-center text-gray-600">Bendahara</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Visi Misi & Arah Gerak -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Visi Misi & Arah Gerak</h3>
+            <div class="bg-emerald-100 p-8 rounded-xl">
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold text-emerald-800 mb-3">Visi</h4>
+                    <p class="text-gray-700">
+                        Menjadikan Pramuka UIN Sunan Ampel Surabaya sebagai wadah pembentukan karakter mahasiswa yang berakhlak mulia, mandiri, peduli, dan bertanggung jawab.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-emerald-800 mb-3">Misi</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Menyelenggarakan kegiatan kepramukaan yang kreatif dan inovatif</li>
+                        <li>Membentuk karakter mahasiswa yang berjiwa kepemimpinan</li>
+                        <li>Meningkatkan kepedulian sosial masyarakat kampus dan lingkungan</li>
+                        <li>Menjalin kerjasama dengan berbagai pihak untuk pengembangan organisasi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Filosofi Lambang -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Filosofi Lambang</h3>
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <div class="lg:w-1/3 flex justify-center">
+                    <img src="https://placehold.co/300x300" alt="Lambang Pramuka UINSA dengan detail tunas kelapa warna hijau di atas lingkaran biru dengan tulisan Pramuka UINSA" class="w-64 h-64 object-contain">
+                </div>
+                <div class="lg:w-2/3">
+                    <p class="text-gray-600 mb-4">
+                        Lambang Pramuka UIN Sunan Ampel Surabaya memiliki makna filosofis yang mendalam:
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                        <li>Tunas Kelapa melambangkan kesinambungan generasi dan pertumbuhan jiwa muda</li>
+                        <li>Warna Hijau menunjukkan kesegaran, alam, dan kemakmuran</li>
+                        <li>Lingkaran melambangkan persatuan dan kesatuan anggota</li>
+                        <li>Warna Biru pada lingkaran melambangkan keagungan dan kebijaksanaan</li>
+                        <li>Nama organisasi menunjukkan identitas institusi yang menaungi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dewan Racana -->
+        <div>
+            <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Dewan Racana</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h4 class="font-semibold text-lg mb-2 text-center">Dewan Kehormatan</h4>
+                    <p class="text-gray-600 mb-4 text-center">Menjaga etika dan norma organisasi</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Dr. Ahmad Fauzi, M.Pd</span>
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Rina Wijayanti, S.Pd</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h4 class="font-semibold text-lg mb-2 text-center">Dewan Kerja</h4>
+                    <p class="text-gray-600 mb-4 text-center">Penanggung jawab kegiatan operasional</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Andi Prasetyo</span>
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Dina Anggraeni</span>
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Farhan Maulana</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h4 class="font-semibold text-lg mb-2 text-center">Dewan Saka</h4>
+                    <p class="text-gray-600 mb-4 text-center">Pengelola satuan karya khusus</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Saka Bakti Husada</span>
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Saka Wanabhakti</span>
+                        <span class="bg-emerald-100 px-3 py-1 rounded-full text-sm">Saka Taruna Bumi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informasi Section -->
+    <section id="informasi" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 section-title mb-12">Informasi</h2>
+            
+            <!-- Berita -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Berita</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <img src="https://placehold.co/600x400" alt="Anggota pramuka UINSA sedang melakukan pelatihan P3K di lapangan kampus" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-emerald-600">26 Mei 2023</span>
+                            <h4 class="text-xl font-semibold my-2">Pelatihan Pertolongan Pertana Darurat</h4>
+                            <p class="text-gray-600 mb-4">Pramuka UINSA mengadakan pelatihan P3K dasar untuk anggota baru.</p>
+                            <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800 transition">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <img src="https://placehold.co/600x400" alt="Kegiatan perkemahan sabtu minggu di bukit dengan tenda-tenda warna-warni" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-emerald-600">15 April 2023</span>
+                            <h4 class="text-xl font-semibold my-2">Perkemahan Sabtu-Minggu 2023</h4>
+                            <p class="text-gray-600 mb-4">Sukses dilaksanakan perkemahan rutin tahunan di Bukit Indah.</p>
+                            <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800 transition">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                        <img src="https://placehold.co/600x400" alt="Upacara penyerahan bendera merah putih baru di halaman kampus" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-emerald-600">3 Maret 2023</span>
+                            <h4 class="text-xl font-semibold my-2">Penyerahan Bendera Merah Putih</h4>
+                            <p class="text-gray-600 mb-4">Pramuka UINSA menerima bendera merah putih baru dari Rektor.</p>
+                            <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800 transition">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="#" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-6 rounded-lg transition">Semua Berita</a>
+                </div>
+            </div>
+            
+            <!-- Kegiatan Rutin -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Kegiatan Rutin</h3>
+                
+                <div class="space-y-4">
+                    <!-- Dropdown 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden dropdown" onclick="toggleDropdown(this)">
+                        <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-gray-800 hover:bg-gray-50 focus:outline-none transition">
+                            <span>Latihan Rutin Setiap Hari Sabtu</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content px-4 pb-4">
+                            <p class="text-gray-600">Latihan rutin dilaksanakan setiap hari Sabtu pukul 08.00-12.00 WIB di Lapangan Pramuka Kampus A. Kegiatan meliputi: materi kepramukaan, keterampilan dasar, permainan edukatif, dan persiapan kegiatan khusus.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Dropdown 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden dropdown" onclick="toggleDropdown(this)">
+                        <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-gray-800 hover:bg-gray-50 focus:outline-none transition">
+                            <span>Bakti Sosial Bulanan</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content px-4 pb-4">
+                            <p class="text-gray-600">Setiap bulan kami mengadakan kegiatan bakti sosial dengan berbagai bentuk seperti: pembagian sembako, kerja bakti lingkungan, donor darah, dan pembinaan anak-anak di panti asuhan.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Dropdown 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden dropdown" onclick="toggleDropdown(this)">
+                        <button class="w-full flex justify-between items-center p-4 text-left font-semibold text-gray-800 hover:bg-gray-50 focus:outline-none transition">
+                            <span>Perkemahan Tahunan</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content px-4 pb-4">
+                            <p class="text-gray-600">Diadakan setiap akhir semester dengan durasi 2-3 hari. Kegiatan meliputi: materi outdoor, uji keterampilan, api unggun, jelajah alam, dan berbagai permainan edukatif untuk melatih kemandirian dan kerja sama tim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Unit Pengembangan -->
+            <div>
+                <h3 class="text-2xl font-semibold text-emerald-800 mb-6">Unit Pengembangan</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Pramuka Garuda</h4>
+                        <p class="text-gray-600">Program pencapaian tertinggi dalam pendidikan kepramukaan untuk anggota berprestasi.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Saka Bahari</h4>
+                        <p class="text-gray-600">Satuan Karya khusus untuk pengembangan minat di bidang kebaharian dan kemaritiman.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Saka Bakti Husada</h4>
+                        <p class="text-gray-600">Satuan Karya yang fokus pada bidang kesehatan dan pelayanan kesehatan masyarakat.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Saka Wira Kartika</h4>
+                        <p class="text-gray-600">Satuan Karya yang bekerja sama dengan TNI AD untuk pengembangan wawasan kebangsaan dan bela negara.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-gray-800 section-title mb-12">Kontak Kami</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-xl font-semibold text-emerald-800 mb-6">Informasi Kontak</h3>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">WhatsApp</h4>
+                            <p class="text-gray-600">082131672002</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Email</h4>
+                            <p class="text-gray-600">racana.uinsby@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Instagram</h4>
+                            <p class="text-gray-600">@Pramuka_UINSA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Alamat</h4>
+                            <p class="text-gray-600">Jl. Jend. Ahmad Yani 117, Surabaya<br>Kampus UIN Sunan Ampel Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold text-emerald-800 mb-6">Kirim Pesan</h3>
+                
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500">
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Nomor Telepon</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-4 rounded-lg transition">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Pramuka UINSA</h3>
+                    <p class="text-emerald-100">Gerakan Pramuka Gugus Depan UIN Sunan Ampel Surabaya. Membentuk generasi muda yang berkarakter dan berakhlak mulia.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#tentang" class="text-emerald-100 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#informasi" class="text-emerald-100 hover:text-white transition">Informasi</a></li>
+                        <li><a href="#kontak" class="text-emerald-100 hover:text-white transition">Kontak</a></li>
+                        <li><a href="#" class="text-emerald-100 hover:text-white transition">Pendaftaran</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Jam Operasional</h3>
+                    <ul class="space-y-2 text-emerald-100">
+                        <li class="flex justify-between">
+                            <span>Senin - Jumat</span>
+                            <span>08.00 - 16.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sabtu</span>
+                            <span>08.00 - 12.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Minggu</span>
+                            <span>Libur</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Sosial Media</h3>
+                 

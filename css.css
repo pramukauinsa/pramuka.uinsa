@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #006633;
+    padding: 1rem;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    text-align: center;
+    padding: 4rem 1rem;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 1rem 0;
+}
+
+.btn {
+    background: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #FFC107;
+}
+
+/* News */
+.news {
+    padding: 2rem;
+    text-align: center;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    margin: 0 10px 10px;
+}
+
+/* Footer */
+footer {
+    background: #006633;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #006633;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
